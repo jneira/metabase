@@ -38,10 +38,10 @@ export const LogoIconWrapper = styled.div`
 `;
 
 export const SidebarButtonContainer = styled.div`
-  left: 10px;
+  left: 7px;
   opacity: 0;
   position: absolute;
-  top: 8px;
+  top: 1px;
 `;
 
 export const RowLeft = styled.div`
