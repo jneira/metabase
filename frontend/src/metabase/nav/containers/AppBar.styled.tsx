@@ -56,6 +56,7 @@ export const RowLeft = styled.div`
   &:hover {
     ${LogoIconWrapper} {
       opacity: 0;
+      pointer-events: none;
     }
 
     ${SidebarButtonContainer} {
