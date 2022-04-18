@@ -21,29 +21,49 @@ export const AppBarRoot = styled.header`
   z-index: 4;
 `;
 
-export const RowLeft = styled.div`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-`;
-
-export const RowRight = styled(RowLeft)`
-  flex: 1;
-  justify-content: flex-end;
-`;
-
 export const LogoIconWrapper = styled.div`
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 6px;
+  left: 0;
   padding: ${space(1)};
   margin-left: ${space(1)};
+  position: absolute;
 
   &:hover {
     background-color: ${color("bg-light")};
   }
+`;
+
+export const SidebarButtonContainer = styled.div`
+  left: 10px;
+  opacity: 0;
+  position: absolute;
+  top: 8px;
+`;
+
+export const RowLeft = styled.div`
+  display: flex;
+  height: 100%;
+  flex-direction: row;
+  align-items: center;
+  width: 50%;
+
+  &:hover {
+    ${LogoIconWrapper} {
+      opacity: 0;
+    }
+
+    ${SidebarButtonContainer} {
+      opacity: 1;
+    }
+  }
+`;
+
+export const RowRight = styled(RowLeft)`
+  justify-content: flex-end;
 `;
 
 export const SearchBarContainer = styled.div`
